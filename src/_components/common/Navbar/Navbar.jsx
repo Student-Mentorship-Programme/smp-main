@@ -29,7 +29,7 @@ const Navbar = () => {
                     />
                 </div>
                 <div className={styles.smp_heading_navbar}>
-                    <Link href={"/"} onClick={() => setActiveNavElement(null)}><span style={{ color: '#ED2B2B' }}>SMP</span><span style={{ color: '#073C52' }}>-IITR</span></Link>
+                    <Link href={"/"} onClick={() => setActiveNavElement(null)}><span style={{ color: '#063143' }}>SMP</span><span style={{ color: '#073C52' }}>-IITR</span></Link>
                 </div>
             </div>
             <div className={styles.navbar_main_right}>
