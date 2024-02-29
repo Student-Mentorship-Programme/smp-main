@@ -1,6 +1,41 @@
 .card_container {
-    height: 130px;
+    height: auto;
     width: 760px;
     border-radius: 16px;
     border: 1px solid rgb(0, 0, 0, 0.3);
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: stretch; 
+    padding: 35px 15px; 
+    transition: height 0.5s ease-in-out; 
 }
+
+.card_container_text_area {
+    display: flex;
+    align-items: center;
+    width: 85%;
+    font-size: 25px;
+    padding: 0 20px;
+    margin: 10px 0;
+}
+
+.card_container_text_area.opened {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.answer_container {
+    background-color: #ced7db;
+    border-radius: 16px;
+    margin: 20px 0px 0px 0px;
+    padding: 15px;
+    transform: translateX(-5px);
+}
+
+.card_container_drop_down {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+

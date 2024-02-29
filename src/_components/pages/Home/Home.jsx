@@ -7,6 +7,38 @@ import QnACard from "@pages/Home/Card/QnACards/Card"
 import MentorCard from "@pages/Home/Card/MentorCards/Card"
 import vectorImage from '@/images/vector-image.svg'
 
+const mentorQuotes = [
+    {
+        mentor: "",
+        quote: "",
+        branch: "",
+        year: ""
+    }
+]
+
+const questionAnswers = [
+    {
+        question: "How much time should I devote to being a mentor?",
+        answer: "The amount of time you devote to being a mentor can vary based on your availability and the needs of your mentees. Generally, mentors are expected to commit to regular meetings with their mentees, typically ranging from one to two hours per meeting, as well as additional time for communication and support as needed"
+    },
+    {
+        question: "What are the benefits of participating in the student mentorship program?",
+        answer: "Participation in the student mentorship program offers numerous benefits, including personal and professional growth, networking opportunities, access to valuable resources and support, enhanced communication and leadership skills, and a sense of community and belonging"
+    },
+    {
+        question: "What can I expect from my mentor?",
+        answer: "You can expect your mentor to provide guidance, advice, and support tailored to your needs. Mentors are there to help you set goals, overcome challenges, and make the most of your university experience"
+    },
+    {
+        question: "How often should I meet with my mentor?",
+        answer: "The frequency of mentor-mentee meetings can vary depending on your needs and availability. Typically, mentors and mentees meet regularly, such as once a week or biweekly, to maintain consistent communication and progress towards goals"
+    },
+    {
+        question: "What topics can I discuss with my mentor?",
+        answer: "You can discuss a wide range of topics with your mentor, including academic challenges, career exploration, time management, study skills, extracurricular involvement, personal development, and any other concerns or interests you may have"
+    }
+]
+
 const Index = () => {
     return (
         <div className={styles.main}>
@@ -78,7 +110,7 @@ const Index = () => {
                     <div className={styles.main_fourth_container_content_cards}>
                         {
                             Array.from(Array(5)).map((_,index)=>{
-                                return <QnACard/>
+                                return <QnACard question={questionAnswers[index].question} answer={questionAnswers[index].answer}/>
                             })
                         }
                     </div>
