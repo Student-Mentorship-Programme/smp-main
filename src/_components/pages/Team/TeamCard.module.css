@@ -1,0 +1,71 @@
+/* Team Card */
+.team_card_holder{
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    text-align: center;
+    width: 270px;
+}
+.team_card_image{
+    position: relative;
+    width: 270px;
+    height: 360px;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.team_card_image img{
+    filter:grayscale(0.8);
+    width: 100%;
+    height: 100%;
+    transition: 0.3s;
+}
+.team_card_image:hover img{
+    filter:grayscale(0);
+    width: 120%;
+    height: 120%;
+}
+.team_card_name{
+    font-size: 19px;
+    font-weight: bold;
+}
+.team_card_position{
+    color: #937ce8;
+}
+
+.team_card_social_media{
+    position: absolute;
+    bottom: 0px;
+    color: white;
+    display: none;
+    justify-content: center;
+}
+.team_card_social_media div{
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
+}
+.team_card_social_media div svg{
+    font-size: 30px;
+}
+
+.team_card_image:hover .team_card_social_media{
+    bottom: 20px;
+    animation-name: moveUp;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    display: flex;
+}
+
+@keyframes moveUp {
+    0%{
+        bottom: -10px;
+    }
+    100%{
+        bottom: 30px;
+    }
+}
