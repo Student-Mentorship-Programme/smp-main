@@ -2,9 +2,9 @@
 import React from 'react';
 import styles from "./Home.module.css";
 import Image from "next/image";
-import EventsCard from "@pages/home/Card/EventCards/Card";
-import QnACard from "@pages/home/Card/QnACards/Card"
-import MentorCard from "@pages/home/Card/MentorCards/Card"
+import EventsCard from "@pages/Home/Card/EventCards/Card";
+import QnACard from "@pages/Home/Card/QnACards/Card"
+import MentorCard from "@pages/Home/Card/MentorCards/Card"
 import vectorImage from '@/images/vector-image.svg'
 
 const Index = () => {
