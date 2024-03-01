@@ -7,8 +7,14 @@ import instagramIcon from '@/images/common/footer/instagramIcon.svg'
 import gmailIcon from '@/images/common/footer/gmailIcon.svg'
 import facebookIcon from '@/images/common/footer/facebookIcon.svg'
 import linkedinIcon from '@/images/common/footer/linkedinIcon.svg'
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+    const pathname = usePathname();
+    if(pathname == "/about-us"){
+        return <></>;
+    }
+
     return (
         <footer className={styles.footer}>
             <div className={styles.footer_main}>
