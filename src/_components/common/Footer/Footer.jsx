@@ -10,6 +10,18 @@ import linkedinIcon from '@/images/common/footer/linkedinIcon.svg'
 import Link from "next/link";
 
 const Footer = () => {
+    const recipientEmail = "smp.iitr.ac.in";
+
+    const gmailComposeLink = `mailto:${recipientEmail}`;
+
+    const socialMediaLinks = [
+        { icon: twitterIcon, link: "https://twitter.com/home?lang=en" },
+        { icon: instagramIcon, link: "https://www.instagram.com/smp_iitr/" },
+        { icon: gmailIcon, link: gmailComposeLink },
+        { icon: facebookIcon, link: "https://www.facebook.com/MentorshipIITR/" },
+        { icon: linkedinIcon, link: "https://www.linkedin.com/company/smpiitr/mycompany/" }
+    ];
+
     return (
         <footer className={styles.footer}>
             <div className={styles.footer_main}>
@@ -59,13 +71,7 @@ const Footer = () => {
                 <div className={styles.footer_main_right}>
                     <div className={styles.footer_main_right_icons}>
                         {
-                            [
-                                { icon: twitterIcon, link: "https://twitter.com/home?lang=en" }, 
-                                { icon: instagramIcon, link: "https://www.instagram.com/" }, 
-                                { icon: gmailIcon, link: "https://mail.google.com/" }, 
-                                { icon: facebookIcon, link: "https://facebook.com" }, 
-                                { icon: linkedinIcon, link: "https://www.linkedin.com/" }
-                            ].map((object, index) => {
+                            socialMediaLinks.map((object, index) => {
                                     return (
                                         <Link href={object.link} target="_blank"><Image src={object.icon}/></Link>
                                     )
