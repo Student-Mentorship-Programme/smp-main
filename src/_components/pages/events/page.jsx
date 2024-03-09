@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './page.module.css'
 import Image from 'next/image'
 import Image1 from "@/images/pages/events/image1.svg"
@@ -39,7 +39,31 @@ const events = [
         venue: 'LHC 005',
         description: 'Get a real outlook of the corporate world and make better decision about your chosen field.',
         image: Image4
-    }
+    },
+    {
+        title: 'Climbing up the Corporate Ladder',
+        date: '2024-02-23',
+        time: '16:15:00 hrs',
+        venue: 'LHC 005',
+        description: 'Get a real outlook of the corporate world and make better decision about your chosen field.',
+        image: Image4
+    },
+    {
+        title: 'Climbing up the Corporate Ladder',
+        date: '2024-02-23',
+        time: '16:15:00 hrs',
+        venue: 'LHC 005',
+        description: 'Get a real outlook of the corporate world and make better decision about your chosen field.',
+        image: Image4
+    },
+    {
+        title: 'Climbing up the Corporate Ladder',
+        date: '2024-02-23',
+        time: '16:15:00 hrs',
+        venue: 'LHC 005',
+        description: 'Get a real outlook of the corporate world and make better decision about your chosen field.',
+        image: Image4
+    },
 ]
 
 const Index = () => {
@@ -69,7 +93,10 @@ const Index = () => {
                                 <button>Learn more</button>
                             </div>
                             <div className={styles.event_card_image}>
-                                <Image src={event?.image} alt={event?.title}/>
+                                <Image 
+                                    src={event?.image}
+                                    alt={event?.title}
+                                />
                             </div>
                         </div>
                     )

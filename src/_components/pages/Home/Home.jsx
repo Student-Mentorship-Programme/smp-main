@@ -6,8 +6,57 @@ import EventsCard from "@pages/Home/Card/EventCards/Card";
 import QnACard from "@pages/Home/Card/QnACards/Card"
 import MentorCard from "@pages/Home/Card/MentorCards/Card"
 import vectorImage from '@/images/vector-image.svg'
+import icon1 from '@/images/pages/home/icon1.svg';
+
+const eventCards = [
+    {
+        title: "Cross Mentorship",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste quia animi eum deleniti alias natus commodi temporibus amet ipsa.",
+        icon: icon1
+    },
+    {
+        title: "Cross Mentorship",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste quia animi eum deleniti alias natus commodi temporibus amet ipsa.",
+        icon: icon1
+    },
+    {
+        title: "Cross Mentorship",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste quia animi eum deleniti alias natus commodi temporibus amet ipsa.",
+        icon: icon1
+    }
+]
 
 const mentorQuotes = [
+    {
+        mentor: "",
+        quote: "",
+        branch: "",
+        year: ""
+    },
+    {
+        mentor: "",
+        quote: "",
+        branch: "",
+        year: ""
+    },
+    {
+        mentor: "",
+        quote: "",
+        branch: "",
+        year: ""
+    },
+    {
+        mentor: "",
+        quote: "",
+        branch: "",
+        year: ""
+    },
+    {
+        mentor: "",
+        quote: "",
+        branch: "",
+        year: ""
+    },
     {
         mentor: "",
         quote: "",
@@ -52,11 +101,13 @@ const Index = () => {
                         <div className={styles.main_first_container_content_title_area_description}>
                             Student Mentorship Program is one of the largest on-campus student body initiatives which assigns a mentor (a Pre-Final or Final year student) to all the freshmen within the same branch. It ensures bridging the communication gap between them by providing a dynamic environment for healthy discussion, guidance and one-to-one counselling.
                         </div>
-                        <button>
-                            Learn more
-                        </button>
+                        <div>
+                            <button>
+                                Learn more
+                            </button>
+                        </div>
                     </div>
-                    <div className={styles.main_first_container_image}>
+                    <div style={{ width: '52.5%' }}>
                         <Image src={vectorImage} />
                     </div>
                 </div>
@@ -70,8 +121,15 @@ const Index = () => {
                     </div>
                     <div className={styles.main_second_container_content_cards}>
                         {
-                            Array.from(Array(3)).map((_,index)=>{
-                                return <EventsCard />
+                            eventCards.map((event, index) => {
+                                return (
+                                    <EventsCard 
+                                        key={index}
+                                        title={event.title} 
+                                        description={event.description} 
+                                        icon={event.icon}
+                                    />
+                                )
                             })
                         }
                     </div>
@@ -109,16 +167,23 @@ const Index = () => {
                     </div>
                     <div className={styles.main_fourth_container_content_cards}>
                         {
-                            Array.from(Array(5)).map((_,index)=>{
-                                return <QnACard question={questionAnswers[index].question} answer={questionAnswers[index].answer}/>
+                            questionAnswers.map((qA, index) => {
+                                return (
+                                    <QnACard 
+                                        key={index}
+                                        question={qA.question}
+                                        answer={qA.answer}
+                                        number={index}
+                                    />
+                                )
                             })
                         }
                     </div>
                 </div>
             </div>
-            <div className={styles.main_fourth_container_option}>
+            {/* <div className={styles.main_fourth_container_option}>
                 <a href="/">view more</a>
-            </div>
+            </div> */}
         </div>
     );
 }
