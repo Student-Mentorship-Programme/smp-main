@@ -1,9 +1,14 @@
-"use client"
 import React from 'react'
+import MentorPage from '@components/pages/Mentor/Mentor'
+
+export const metadata = {
+    title: 'Mentors',
+    description: 'SMP - Mentors',
+}
 
 const Mentors = () => {
     return (
-        <div>Mentors</div>
+        <MentorPage />
     )
 }
 

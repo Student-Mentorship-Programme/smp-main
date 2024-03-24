@@ -1,23 +1,27 @@
-import React from 'react'
+import React from 'react';
+import { Card, Avatar, Typography } from 'antd';
 import styles from './Card.module.css';
 
-const Card = () => {
+const { Meta } = Card;
+const { Text } = Typography;
+
+const CustomCard = ({ mentor, quote, branch, year }) => {
     return (
-        <div className={styles.card_container}>
-            <div className={styles.card_container_icon}>
-                
-            </div>
+        <Card className={styles.card_container}>
+            <Avatar className={styles.card_container_icon} />
             <div className={styles.card_container_quote}>
-
+                <Text>{quote}</Text>
             </div>
-            <div className={styles.card_container_name}>
-                
-            </div>
+            <Meta
+                className={styles.card_container_name}
+                title={mentor}
+            />
             <div className={styles.card_container_branch_year}>
-
+                <Text>{branch}</Text>
+                <Text>{year}</Text>
             </div>
-        </div>
-    )
-}
+        </Card>
+    );
+};
 
-export default Card
+export default CustomCard;

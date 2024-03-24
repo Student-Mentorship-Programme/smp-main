@@ -7,13 +7,20 @@ import instagramIcon from '@/images/common/footer/instagramIcon.svg'
 import gmailIcon from '@/images/common/footer/gmailIcon.svg'
 import facebookIcon from '@/images/common/footer/facebookIcon.svg'
 import linkedinIcon from '@/images/common/footer/linkedinIcon.svg'
-import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Footer = () => {
-    const pathname = usePathname();
-    if(pathname == "/about-us"){
-        return <></>;
-    }
+    const recipientEmail = "smp.iitr.ac.in";
+
+    const gmailComposeLink = `mailto:${recipientEmail}`;
+
+    const socialMediaLinks = [
+        { icon: twitterIcon, link: "https://twitter.com/home?lang=en" },
+        { icon: instagramIcon, link: "https://www.instagram.com/smp_iitr/" },
+        { icon: gmailIcon, link: gmailComposeLink },
+        { icon: facebookIcon, link: "https://www.facebook.com/MentorshipIITR/" },
+        { icon: linkedinIcon, link: "https://www.linkedin.com/company/smpiitr/mycompany/" }
+    ];
 
     return (
         <footer className={styles.footer}>
@@ -64,11 +71,11 @@ const Footer = () => {
                 <div className={styles.footer_main_right}>
                     <div className={styles.footer_main_right_icons}>
                         {
-                            [twitterIcon, instagramIcon, gmailIcon, facebookIcon, linkedinIcon].map((icon, index) => {
-                                return (
-                                    <Image src={icon} />
-                                )
-                            })
+                            socialMediaLinks.map((object, index) => {
+                                    return (
+                                        <Link href={object.link} target="_blank"><Image src={object.icon}/></Link>
+                                    )
+                                })
                         }
                     </div>
                 </div>

@@ -9,10 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
+=======
+    "@ant-design/icons": "^5.3.1",
+>>>>>>> 9383d55854dbbd349ef0c37ea8b39bc90e4517e3
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.11",
     "@mui/material": "^5.15.11",
+<<<<<<< HEAD
+=======
+    "antd": "^5.15.1",
+>>>>>>> 9383d55854dbbd349ef0c37ea8b39bc90e4517e3
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18"
