@@ -107,7 +107,7 @@ const Index = () => {
                             </button>
                         </div>
                     </div>
-                    <div style={{ width: '52.5%' }}>
+                    <div className={styles.main_first_container_image}>
                         <Image src={vectorImage} />
                     </div>
                 </div>
