@@ -48,13 +48,13 @@
 }
 
 .event_card_content_title {
-    font-size: 27.5px;
+    font-size: 25.5px;
     font-weight: 600;
     margin-bottom: 17.5px;
 }
 
 .event_card_content_main {
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
 }
 
@@ -72,16 +72,16 @@
 }
 
 .event_card_content_main_description {
-    margin-bottom: 20px;
+    margin: 7px 0 20px 0;
 }
 
 .event_card_content_main_description span {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 .event_card_content button {
-    padding: 14px 24px;
-    border-radius: 40px;
+    padding: 10px 20px;
+    border-radius: 10px;
     border: none;
     background-color: #063143;
     color: #ffffff;

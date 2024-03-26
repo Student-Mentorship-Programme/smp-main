@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import styles from './AboutUs.module.css';
 import Image from 'next/image'
 import image1 from '@/images/pages/about-us/image1.svg'
-import image2 from '@/images/pages/about-us/image2.svg'
+import image2 from '@/images/pages/about-us/image2.png'
 import WhatWeDo from "@/images/pages/about-us/what_we_do.JPG";
 import TeamImage from "@/images/pages/about-us/team_image.JPG";
 import { useRouter } from 'next/navigation';
@@ -51,7 +51,6 @@ const Index = () => {
                     <div className={styles.about_us_main_heading}>
                         ABOUT US
                     </div>
-                    <div className={styles.about_us_main_container_1}>
                         <div className={styles.about_us_main_container_1_content}>
                             <div className={styles.about_us_main_container_1_content_text_area}>
                                 <div className={styles.about_us_main_container_1_content_text_area_heading}>
@@ -72,7 +71,6 @@ const Index = () => {
                                 <Image src={image2} />
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
 
