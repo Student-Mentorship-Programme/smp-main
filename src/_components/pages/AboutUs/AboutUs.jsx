@@ -3,40 +3,54 @@ import React, { useEffect, useState, useRef } from 'react'
 import styles from './AboutUs.module.css';
 import Image from 'next/image'
 import image1 from '@/images/pages/about-us/image1.svg'
-import image2 from '@/images/pages/about-us/image2.svg'
-import image3 from '@/images/pages/about-us/image3.svg'
-import image4 from '@/images/pages/about-us/image4.svg'
-import mainImage from '@/images/pages/about-us/image-main.svg'
-import { useRouter } from 'next/navigation'
+import image2 from '@/images/pages/about-us/image2.png'
+import WhatWeDo from "@/images/pages/about-us/what_we_do.JPG";
+import TeamImage from "@/images/pages/about-us/team_image.JPG";
+import { useRouter } from 'next/navigation';
 
 const Index = () => {
     const router = useRouter();
-    const scrollPosition = useRef(0);
-    const activeChildren = useRef(0);
+    const [scrollCount, setScrollCount] = useState(0);
+    const [isScrolling, setIsScrolling] = useState(false);
 
-    const handleScroll = (e) => {
-        console.log(e.currentTarget);
-        // if (scrollPosition.current < window.scrollY) {
-        //     let slideMain = document.getElementsByClassName(styles.about_us_main)[0];
-        //     slideMain.children[activeChildren.current + 1].scrollIntoView({ behavior: "smooth" });
-        //     setTimeout(() => activeChildren.current += 1, 1000);
-        // }
-        // else {
-        // }
-        // scrollPosition.current = window.scrollY;
-    };
+    const translateY = `translateY(-${scrollCount * 100}vh)`;
+
+    useEffect(() => {
+        const handleScroll = (event) => {
+            event.preventDefault();
+            if (!isScrolling) {
+                setIsScrolling(true);
+
+                if (event.deltaY > 0 && scrollCount < 3) {
+                    setScrollCount((prevCount) => prevCount + 1);
+                } else if (event.deltaY < 0 && scrollCount > 0) {
+                    setScrollCount((prevCount) => prevCount - 1);
+                }
+
+                setTimeout(() => {
+                    setIsScrolling(false);
+                }, 1000);
+            }
+        };
+
+        window.addEventListener('wheel', handleScroll, { passive: false });
+
+        return () => {
+            window.removeEventListener('wheel', handleScroll);
+        };
+    }, [scrollCount, isScrolling]);
 
     return (
-        <div className={styles.about_us_main} onWheelCapture={handleScroll}>
-            <div className={styles.slide_container}>
+        <div className={styles.about_us_main}>
+            <div className={styles.slide_container} style={{ transform: translateY }}>
                 <div className={styles.background_overlay}></div>
             </div>
-            <div className={styles.slide_container}>
+
+            <div className={styles.slide_container} style={{ transform: translateY }}>
                 <div>
                     <div className={styles.about_us_main_heading}>
                         ABOUT US
                     </div>
-                    <div className={styles.about_us_main_container_1}>
                         <div className={styles.about_us_main_container_1_content}>
                             <div className={styles.about_us_main_container_1_content_text_area}>
                                 <div className={styles.about_us_main_container_1_content_text_area_heading}>
@@ -57,16 +71,14 @@ const Index = () => {
                                 <Image src={image2} />
                             </div>
                         </div>
-                    </div>
                 </div>
             </div>
 
-
-            <div className={styles.slide_container}>
+            <div className={styles.slide_container} style={{ transform: translateY }}>
                 <div className={styles.about_us_main_container_2}>
                     <div className={styles.about_us_main_container_2_content}>
                         <div className={styles.about_us_main_container_2_content_image}>
-                            <Image src={image3} />
+                            <Image src={WhatWeDo} />
                         </div>
                         <div className={styles.about_us_main_container_2_content_text_area}>
                             <div className={styles.about_us_main_container_2_content_text_area_heading}>
@@ -84,8 +96,7 @@ const Index = () => {
                 </div>
             </div>
 
-
-            <div className={styles.slide_container}>
+            <div className={styles.slide_container} style={{ transform: translateY }}>
                 <div className={styles.about_us_main_container_3}>
                     <div className={styles.about_us_main_container_3_content}>
                         <div className={styles.about_us_main_container_3_content_text_area}>
@@ -99,15 +110,14 @@ const Index = () => {
                                     The amazing amalgamation of designers, developers, operations, etc. along with a vast alumni base has always been an important part of our journey. Check out our Team's page to know more about our team.
                                 </span>
                             </div>
-                            <button onClick={() => router.push("/")}>Our Team</button>
+                            <button onClick={() => router.push("/team")}>Our Team</button>
                         </div>
                         <div className={styles.about_us_main_container_3_content_image}>
-                            <Image src={image4} />
+                            <Image src={TeamImage} />
                         </div>
                     </div>
                 </div>
             </div>
-
         </div >
     )
 }

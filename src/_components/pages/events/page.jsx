@@ -40,30 +40,6 @@ const events = [
         description: 'Get a real outlook of the corporate world and make better decision about your chosen field.',
         image: Image4
     },
-    {
-        title: 'Climbing up the Corporate Ladder',
-        date: '2024-02-23',
-        time: '16:15:00 hrs',
-        venue: 'LHC 005',
-        description: 'Get a real outlook of the corporate world and make better decision about your chosen field.',
-        image: Image4
-    },
-    {
-        title: 'Climbing up the Corporate Ladder',
-        date: '2024-02-23',
-        time: '16:15:00 hrs',
-        venue: 'LHC 005',
-        description: 'Get a real outlook of the corporate world and make better decision about your chosen field.',
-        image: Image4
-    },
-    {
-        title: 'Climbing up the Corporate Ladder',
-        date: '2024-02-23',
-        time: '16:15:00 hrs',
-        venue: 'LHC 005',
-        description: 'Get a real outlook of the corporate world and make better decision about your chosen field.',
-        image: Image4
-    },
 ]
 
 const Index = () => {

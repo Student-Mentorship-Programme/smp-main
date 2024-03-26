@@ -78,7 +78,7 @@
     /* color: rgba(0, 0, 0, 0.5); */
 }
 
-.navbar_main_right button {
+.navbar_about_us_button{
     background-color: #ffffff;
     color: #063143;
     border: 1px solid #063143;
@@ -87,8 +87,23 @@
     border-radius: 8px;
 }
 
-.navbar_main_right button:hover {
+.navbar_about_us_button:hover {
     background-color: #063143;
     cursor: pointer;
     color: #ffffff;
+}
+
+.navbar_about_us_button_transparent{
+    background:transparent;
+    color: rgb(202, 202, 202);
+    border: 2px solid rgb(202, 202, 202);
+    padding: 8px 25px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+
+.navbar_about_us_button_transparent:hover {
+    background-color: #ffffff;
+    cursor: pointer;
+    color: #000000;
 }

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import './globals.css'
 import Header from '@/_components/common/Header/Header'
 import Footer from '@/_components/common/Footer/Footer'
+import { usePathname } from 'next/navigation';
 
 // const poppins = Poppins({ 
 //   subsets: ['latin'],

@@ -8,8 +8,13 @@ import gmailIcon from '@/images/common/footer/gmailIcon.svg'
 import facebookIcon from '@/images/common/footer/facebookIcon.svg'
 import linkedinIcon from '@/images/common/footer/linkedinIcon.svg'
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+    const pathname = usePathname();
+    if(pathname == "/about-us"){
+        return <></>;
+    }
     const recipientEmail = "smp.iitr.ac.in";
 
     const gmailComposeLink = `mailto:${recipientEmail}`;

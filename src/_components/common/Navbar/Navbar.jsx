@@ -6,8 +6,7 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState, useEffect } from "react"
 
-const Navbar = () => {
-    // console.log(typeof window !== 'undefined');
+const Navbar = ({transparency}) => {
     const router = useRouter()
     const [activeNavElement, setActiveNavElement] = useState(null)
 
@@ -44,7 +43,7 @@ const Navbar = () => {
                 </ul>
                 <button
                     onClick={handleNavButtonClick}
-                // className={activeNavElement === 4 ? styles.active_button : ""}
+                    className={transparency == true ? styles.navbar_about_us_button_transparent : styles.navbar_about_us_button}
                 >
                     About us
                 </button>
