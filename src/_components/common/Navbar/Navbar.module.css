@@ -2,6 +2,7 @@
 
 .navbar_main {
     flex-direction: column;
+    width: 100%;
 }
 
 .navbar_main_container {
