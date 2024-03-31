@@ -92,3 +92,7 @@
     cursor: pointer;
     color: #ffffff;
 }
+
+@media screen and (max-width:576px) {
+    
+}
