@@ -36,7 +36,9 @@ const Navbar = () => {
       <div className={styles.navbar_main_container}>
         <div className={styles.navbar_main_left}>
           <div className={styles.img_holder_navbar}>
-            <Image src={smpLogo} />
+            <Link href={"/"} onClick={() => setActiveNavElement(null)}>
+              <Image src={smpLogo} />
+            </Link>
           </div>
           <div className={styles.smp_heading_navbar}>
             <Link href={"/"} onClick={() => setActiveNavElement(null)}>
