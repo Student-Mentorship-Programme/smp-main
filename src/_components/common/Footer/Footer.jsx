@@ -73,7 +73,7 @@ const Footer = () => {
                         {
                             socialMediaLinks.map((object, index) => {
                                     return (
-                                        <Link href={object.link} target="_blank"><Image src={object.icon}/></Link>
+                                        <Link key={index} href={object.link} target="_blank"><Image src={object.icon}/></Link>
                                     )
                                 })
                         }
