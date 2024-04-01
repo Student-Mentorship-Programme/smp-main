@@ -86,11 +86,12 @@ const Navbar = () => {
           isSidebarVisible ? styles.sidebar_visible : styles.sidebar_invisible
         }
       >
-        <button onClick={toggleSidebar}>
+        
+        <button onClick={toggleSidebar} className={styles.close_button}>
           <Image src={close}></Image>
         </button>
 
-        <ul className={styles.unordered_list}>
+        <ul className={styles.unordered_list_mobile}>
           {[
             "freshers-section : Freshers Section",
             "mentors : Mentors",

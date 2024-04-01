@@ -129,6 +129,7 @@
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(12px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -149,6 +150,10 @@
 @media screen and (max-width: 576px) {
   .navbar_main {
     height: 80px;
+  }
+
+  .navbar_main_container {
+    padding-top: 16px;
   }
 
   .navbar_main_left {
@@ -175,11 +180,26 @@
     display: block;
   }
 
-  .unordered_list {
-    list-style: none;
+  .close_button {
+    margin-left: 60vw;
+    margin-top: 1rem;
+    border: none;
+    background-color: inherit;
+    justify-content: center;
+    align-items: center;
   }
 
-  .list_options_mobile {
+  .close_button img {
+    width: 10vw;
+    height: auto;
+  }
+
+  .unordered_list_mobile {
+    list-style: none;
+    font-size: 1.8rem;
+  }
+
+  .list_options_mobile a {
     color: black;
     text-decoration: none;
   }
