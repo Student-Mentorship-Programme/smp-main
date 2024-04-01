@@ -97,6 +97,7 @@ const Navbar = () => {
             "mentors : Mentors",
             "blogs : Blogs",
             "events : Events",
+            "about-us : About Us",
           ].map((section, index) => (
             <li
               key={index}
@@ -104,17 +105,12 @@ const Navbar = () => {
               className={styles.list_options_mobile}
             >
               <Link href={`/${section.split(":")[0].trim()}`}>
-                {section.split(":")[1].trim()}
+                <span>{section.split(":")[1].trim()}</span>
+                
               </Link>
             </li>
           ))}
         </ul>
-        <button
-          onClick={handleNavButtonClick}
-          // className={activeNavElement === 4 ? styles.active_button : ""}
-        >
-          About us
-        </button>
       </div>
     </div>
   );
