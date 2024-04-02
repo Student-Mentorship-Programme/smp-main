@@ -6,7 +6,7 @@ import styles from "./Navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 const Navbar = () => {
   // console.log(typeof window !== 'undefined');
@@ -14,8 +14,24 @@ const Navbar = () => {
   const [activeNavElement, setActiveNavElement] = useState(null);
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
 
+  let sideBar = useRef();
+
+  useEffect(() => {
+    let handler = (e) => {
+      if (!sideBar.current.contains(e.target)) {
+        setIsSidebarVisible(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
+  });
+
   const handleNavElementClick = (index) => {
     setActiveNavElement(index);
+    setIsSidebarVisible(false)
   };
 
   const handleNavButtonClick = () => {
@@ -82,11 +98,11 @@ const Navbar = () => {
 
       {/* ------------------------------------------------------Side Bar------------------------------------------------------------ */}
       <div
-        className={
-          isSidebarVisible ? styles.sidebar_visible : styles.sidebar_invisible
-        }
+        className={`${styles.sidebar_invisible} ${
+          isSidebarVisible ? styles.sidebar_visible : ""
+        }`}
+        ref={sideBar}
       >
-        
         <button onClick={toggleSidebar} className={styles.close_button}>
           <Image src={close}></Image>
         </button>
@@ -106,7 +122,6 @@ const Navbar = () => {
             >
               <Link href={`/${section.split(":")[0].trim()}`}>
                 <span>{section.split(":")[1].trim()}</span>
-                
               </Link>
             </li>
           ))}
