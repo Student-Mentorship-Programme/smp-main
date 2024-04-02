@@ -13,10 +13,21 @@
 
 .heroSection img {
   width: 50vw;
+  height: auto;
 }
 
 @media only screen and (max-width: 576px) {
   .heroSection {
     margin-top: 80px;
+  }
+  .heroSection img {
+    width: 65vw;
+    height: auto;
+    margin-top: 100px;
+    margin-bottom: 10px;
+  }
+  .heroSection h1 {
+    font-size: 8vw;
+    margin-bottom: 100px;
   }
 }
