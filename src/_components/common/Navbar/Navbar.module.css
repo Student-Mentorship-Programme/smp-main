@@ -3,6 +3,7 @@
 .navbar_main {
   flex-direction: column;
   width: 100%;
+  height: 4rem;
 }
 
 .navbar_main_container {
