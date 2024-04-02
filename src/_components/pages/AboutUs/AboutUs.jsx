@@ -43,7 +43,9 @@ const Index = () => {
   return (
     <div className={styles.about_us_main}>
       <div className={styles.slide_container} style={{ transform: translateY }}>
-        <div className={styles.background_overlay}></div>
+        <div className={styles.background_overlay}>
+          {/* <div className={styles.image_mobile_view}></div> */}
+        </div>
       </div>
 
       <div className={styles.slide_container} style={{ transform: translateY }}>
