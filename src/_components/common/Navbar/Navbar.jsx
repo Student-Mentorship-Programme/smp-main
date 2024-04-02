@@ -31,7 +31,7 @@ const Navbar = () => {
 
   const handleNavElementClick = (index) => {
     setActiveNavElement(index);
-    setIsSidebarVisible(false)
+    setIsSidebarVisible(false);
   };
 
   const handleNavButtonClick = () => {
