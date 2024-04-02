@@ -6,6 +6,7 @@ import image1 from "@/images/pages/about-us/image1.svg";
 import image2 from "@/images/pages/about-us/image2.png";
 import WhatWeDo from "@/images/pages/about-us/what_we_do.jpg";
 import TeamImage from "@/images/pages/about-us/team_image.jpg";
+import teamImageMobile from "@/images/pages/team/TeamPageMobile.jpg";
 import { useRouter } from "next/navigation";
 
 const Index = () => {
@@ -44,7 +45,9 @@ const Index = () => {
     <div className={styles.about_us_main}>
       <div className={styles.slide_container} style={{ transform: translateY }}>
         <div className={styles.background_overlay}>
-          <div className={styles.image_mobile_view}></div>
+          <div className={styles.image_mobile_view}>
+            <Image src={teamImageMobile} alt="Team Image"></Image>
+          </div>
         </div>
       </div>
 

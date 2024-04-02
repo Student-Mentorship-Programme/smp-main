@@ -26,7 +26,26 @@
   background-image: url("../../../../public/images/pages/team/TeamPage.jpg");
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* z-index: 1;  */
+}
+
+.image_mobile_view {
+  z-index: 1;
+  filter: contrast(200%) brightness(115%);
+  /* filter: brightness(150%); */
+
+  display: none;
+  margin-bottom: 50px;
+}
+
+.image_mobile_view img {
+  width: 100%;
+  height: 50vw;
+  border-radius: 15px;
+  filter: brightness();
 }
 
 /* --------------Container-1--------------------- */
@@ -189,10 +208,10 @@
 }
 
 .about_us_main_container_3_content_text_area button:hover {
-    cursor: pointer;
-    color: #063143;
-    background-color: #ffffff;
-  }
+  cursor: pointer;
+  color: #063143;
+  background-color: #ffffff;
+}
 
 .about_us_main_container_3_content_image {
   width: 52%;
@@ -210,18 +229,12 @@
 @media only screen and (max-width: 576px) {
   /* --------------Container-Main--------------------- */
   .background_overlay {
-    filter: brightness(30%);
+    filter: contrast(50%);
   }
 
-  /* .image_mobile_view {
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    background-image: url("../../../../public/images/pages/team/TeamPage.jpg");
-
-    background-position: center;
-    filter: brightness(0%);
-  } */
+  .image_mobile_view {
+    display: block;
+  }
 
   /* --------------Container-1--------------------- */
 
@@ -260,7 +273,7 @@
   }
 
   /* --------------Container-2--------------------- */
-  
+
   .about_us_main_container_2_content {
     margin-top: 0;
     flex-direction: column-reverse;
@@ -268,16 +281,16 @@
     justify-content: center;
     width: 90%;
   }
-  
+
   .about_us_main_container_2_content_text_area {
     width: 100%;
     padding-bottom: 20px;
   }
-  
+
   .about_us_main_container_2_content_text_area_heading {
     margin-bottom: 20px;
   }
-  
+
   .about_us_main_container_2_content_image {
     width: 100%;
     height: auto;
@@ -287,12 +300,12 @@
     height: 100%;
     border-radius: 10px;
   }
-  
+
   .about_us_main_container_2_content_text_area_heading span {
     font-size: 24px;
     font-weight: 600;
   }
-  
+
   .about_us_main_container_2_content_text_area_description span {
     font-size: 19px;
     font-weight: 300;
@@ -300,30 +313,29 @@
 
   /* --------------Container-3--------------------- */
 
-  
   .about_us_main_container_3_content {
     flex-direction: column;
-    justify-content: center;align-items: center;
+    justify-content: center;
+    align-items: center;
     margin-top: 0;
     width: 90%;
     height: 100%;
   }
-  
+
   .about_us_main_container_3_content_text_area {
     align-items: center;
     width: 100%;
-    
   }
-  
+
   .about_us_main_container_3_content_text_area_heading {
     margin-bottom: 20px;
   }
-  
+
   .about_us_main_container_3_content_text_area_heading span {
     font-size: 24px;
     font-weight: 600;
   }
-  
+
   .about_us_main_container_3_content_text_area_description {
     padding-bottom: 20px;
   }
@@ -332,20 +344,18 @@
     font-size: 19px;
     font-weight: 300;
   }
-  
+
   .about_us_main_container_3_content_text_area button {
     margin-bottom: 20px;
     margin-top: 0;
     font-size: 0.85rem;
-
   }
-  
-  
+
   .about_us_main_container_3_content_image {
     width: 100%;
     height: auto;
   }
-  
+
   .about_us_main_container_3_content_image img {
     width: 100%;
     height: auto;
