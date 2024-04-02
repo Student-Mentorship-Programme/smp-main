@@ -4,8 +4,8 @@ import styles from './AboutUs.module.css';
 import Image from 'next/image'
 import image1 from '@/images/pages/about-us/image1.svg'
 import image2 from '@/images/pages/about-us/image2.png'
-import WhatWeDo from "@/images/pages/about-us/what_we_do.JPG";
-import TeamImage from "@/images/pages/about-us/team_image.JPG";
+import WhatWeDo from "@/images/pages/about-us/what_we_do.jpg";
+import TeamImage from "@/images/pages/about-us/team_image.jpg";
 import { useRouter } from 'next/navigation';
 
 const Index = () => {
