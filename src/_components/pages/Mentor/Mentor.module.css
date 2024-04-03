@@ -14,7 +14,7 @@
 
 .mentor_page_main_heading {
     margin: 50px 0 35px 0;
-    font-size: 35px;
+    font-size: 32.5px;
     font-weight: 700;
 }
 
@@ -31,12 +31,17 @@
 
 .mentor_page_main_filter input {
     width: 100%;
-    max-width: 900px;
-    padding: 22.5px;
+    max-width: 800px;
+    padding: 17.5px;
     border: none;
     border-radius: 8px;
-    background-color:#ced7db;
+    background-color: #ced7db;
     font-size: 17.5px;
+}
+
+.mentor_page_main_filter input:focus {
+    outline: none;
+    border: none;
 }
 
 .mentor_page_main_filter input::placeholder {
