@@ -55,12 +55,11 @@ const QnACard = ({ question, answer, number }) => {
 
     return (
         <div className={styles.card_container}>
-            <div className={styles.question}>
+            <div className={styles.question} onClick={toggleCard}>
                 {question}
                 <Button
                     className={`${styles.toggle_button}`}
                     icon={isOpen ? <UpOutlined /> : <DownOutlined />}
-                    onClick={toggleCard}
                 />
             </div>
             {isOpen && (
