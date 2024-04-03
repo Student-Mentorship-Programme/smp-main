@@ -31,6 +31,7 @@
   height: 32px;
   width: 32px;
 }
+
 .img_holder_navbar img {
   height: 100%;
   width: 100%;
@@ -57,7 +58,7 @@
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
-  width: 50%;
+  width: 60%;
 }
 
 .active_option {
@@ -73,7 +74,7 @@
   display: flex;
   justify-content: space-between;
   list-style-type: none;
-  width: 100%;
+  width: 76%;
   font-size: 18px;
   padding-right: 35px;
 }
@@ -87,21 +88,34 @@
   /* color: rgba(0, 0, 0, 0.5); */
 }
 
-.navbar_main_right_about_us_button {
-  background-color: inherit;
+.navbar_about_us_button {
+  background-color: #ffffff;
   color: #063143;
   border: 1px solid #063143;
   padding: 8px 25px;
   font-size: 1.1rem;
-  white-space: nowrap;
   border-radius: 8px;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.navbar_main_right_about_us_button:hover {
+.navbar_about_us_button:hover {
   background-color: #063143;
   cursor: pointer;
   color: #ffffff;
+}
+
+.navbar_about_us_button_transparent {
+  background: transparent;
+  color: rgb(202, 202, 202);
+  border: 2px solid rgb(202, 202, 202);
+  padding: 8px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+.navbar_about_us_button_transparent:hover {
+  background-color: #ffffff;
+  cursor: pointer;
+  color: #000000;
 }
 
 .navbar_main_right_menu_button {
@@ -114,7 +128,7 @@
   width: 35px;
   height: auto;
   position: absolute;
-  top:28px;
+  top: 28px;
   right: 15px;
 }
 
@@ -147,16 +161,21 @@
 /* MOBILE VIEW */
 @media screen and (max-width: 1235px) {
   .navbar_main_right {
-    width: 70%;
+    width: 78%;
+  }
+  .navbar_main_container {
+    padding: 0 10px;
+    padding-top: 7px;
   }
 }
 
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 905px) {
   .navbar_main {
     height: 80px;
   }
 
   .navbar_main_container {
+    padding: 0 20px;
     padding-top: 16px;
   }
 
@@ -168,9 +187,14 @@
     display: none;
   }
 
-  .navbar_main_right_about_us_button {
+  .navbar_about_us_button {
     display: none;
   }
+
+  .navbar_about_us_button_transparent {
+    display: none;
+  }
+
   .navbar_main_right_menu_button {
     display: block;
   }
