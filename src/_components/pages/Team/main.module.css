@@ -19,7 +19,7 @@
 }
 .team_page_image_main img{
     width: auto;
-    height: 700px;
+    height: 50vw;
     border-radius: 10px;
 }
 
@@ -29,75 +29,61 @@
     display: flex;
     justify-content: center;
 }
-.team_filter{
-    width: 70%;
-    display: flex;
-    justify-content: space-between;
-}
-.team_filter button{
-    width: 23%;
-    height: auto;
-    border: 0;
-    background-color: lightgray;
-    padding: 10px 25px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 35px;
-}
-.team_filter button:hover{
-    background-color: red;
-    color: white;
-}
 
 /* Team Grid */
 .team_grid_holder{
-    margin: 5% 0%;
+    margin: 2% 0%;
 }
 .team_grid_top{
-    margin-top: 15px;
+    margin-top: 40px;
     display: flex;
     align-items: center;
     column-gap: 5px;
-    justify-content: space-between;
-    width: 99%;
+    justify-content: center;
+    column-gap: 35px;
+    width: 100%;
 }
 .team_grid_top hr{
     background-color:#063143;
     border: 0;
-    width: 82%;
-    height: 2px;
+    width: 15%;
+    height: 1.5px;
 }
 .team_grid_top h2{
     font-style: italic;
     color: #063143;
-    font-size: 34px;
+    font-size: 26px;
 }
 
 /* Secy */
-.team_grid_secy{
+.team_grid_list{
     display: grid;
     justify-content:space-between;
     grid-template-columns: 20% 20% 20% 20%;
 }
 
-/* Team Members */
-.team_grid_top_members{
-    margin-top: 45px;
-}
-.team_grid_top_members hr{
-    width: 75%;
+
+/* Mobile View */
+@media screen and (max-width: 1120px){
+    .team_page_holder{
+        margin: 7% 2%;
+    }
+    .team_page_holder h1{
+        font-size: 26px;
+    }
+    .team_page_image_main img{
+        height: 60vw;
+    }
 }
 
-.team_grid_members{
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: 23% 23% 23% 23%;
-    justify-content: space-around;
-    row-gap: 40px;
-    text-align: center;
-}
-.team_grid_members_head{
-    font-weight: bold;
-    font-size: 20px;
-    color: red;
+@media screen and (max-width: 858px){
+    .team_page_holder{
+        margin: 7% 2%;
+    }
+    .team_page_holder h1{
+        font-size: 26px;
+    }
+    .team_page_image_main img{
+        height: 60vw;
+    }
 }

@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 
-const Navbar = () => {
+const Navbar = ({ transparency }) => {
   // console.log(typeof window !== 'undefined');
   const router = useRouter();
   const [activeNavElement, setActiveNavElement] = useState(null);
@@ -81,9 +81,8 @@ const Navbar = () => {
             ))}
           </ul>
           <button
-            className={styles.navbar_main_right_about_us_button}
+            className={transparency == true ? styles.navbar_about_us_button_transparent : styles.navbar_about_us_button}
             onClick={handleNavButtonClick}
-            // className={activeNavElement === 4 ? styles.active_button : ""}
           >
             About us
           </button>
@@ -98,9 +97,8 @@ const Navbar = () => {
 
       {/* ------------------------------------------------------Side Bar------------------------------------------------------------ */}
       <div
-        className={`${styles.sidebar_invisible} ${
-          isSidebarVisible ? styles.sidebar_visible : ""
-        }`}
+        className={`${styles.sidebar_invisible} ${isSidebarVisible ? styles.sidebar_visible : ""
+          }`}
         ref={sideBar}
       >
         <button onClick={toggleSidebar} className={styles.close_button}>
