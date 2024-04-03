@@ -1,12 +1,12 @@
-import React from 'react';
-import styles from './Card.module.css';
-import Image from 'next/image';
+import React from "react";
+import styles from "./Card.module.css";
+import Image from "next/image";
 
 const Card = ({ title, description, icon }) => {
     const maxLength = 130;
     const truncateDescription = (text) => {
         if (text.length > maxLength) {
-            return text.substring(0, maxLength) + '...';
+            return text.substring(0, maxLength) + "...";
         }
         return text;
     };

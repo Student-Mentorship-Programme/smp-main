@@ -7,6 +7,8 @@ import QnACard from "@pages/Home/Card/QnACards/Card";
 import MentorCard from "@pages/Home/Card/MentorCards/Card";
 import vectorImage from "@/images/vector-image.svg";
 import icon1 from "@/images/pages/home/icon1.svg";
+import icon2 from "@/images/pages/home/icon2.svg";
+import icon3 from "@/images/pages/home/icon3.svg";
 
 const eventCards = [
     {
@@ -19,13 +21,13 @@ const eventCards = [
         title: "Cross Mentorship",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste quia animi eum deleniti alias natus commodi temporibus amet ipsa.",
-        icon: icon1,
+        icon: icon2,
     },
     {
         title: "Cross Mentorship",
         description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste quia animi eum deleniti alias natus commodi temporibus amet ipsa.",
-        icon: icon1,
+        icon: icon3,
     },
 ];
 
@@ -162,22 +164,26 @@ const Index = () => {
             </div>
 
             {/* Third Container */}
-            {/* <div className={styles.main_third_container}>
+            <div className={styles.main_third_container}>
                 <div className={styles.main_third_container_content_heading}>
-                    <span>Hear from our Mentors</span>
+                    <span>Gallery</span>
                 </div>
                 <div className={styles.main_third_container_content_card_area}>
-                    <div className={styles.main_third_container_content_card_area_left_fade}></div>
-                    <div className={styles.main_third_container_content_cards}>
-                        {
-                            Array.from(Array(6)).map((_,index)=>{
-                                return <MentorCard />
-                            })
+                    <div
+                        className={
+                            styles.main_third_container_content_card_area_left_fade
                         }
+                    ></div>
+                    <div className={styles.main_third_container_content_cards}>
+                        <MentorCard />
                     </div>
-                    <div className={styles.main_third_container_content_card_area_right_fade}></div>
+                    <div
+                        className={
+                            styles.main_third_container_content_card_area_right_fade
+                        }
+                    ></div>
                 </div>
-            </div> */}
+            </div>
 
             {/* Fourth Container */}
             <div className={styles.main_fourth_container}>
