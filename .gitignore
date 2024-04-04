@@ -34,3 +34,5 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+src/_components/pages/Mentor/~$mentor_sheet.xlsx
+src/_components/pages/Mentor/mentor_sheet.xlsx

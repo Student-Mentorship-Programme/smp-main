@@ -169,19 +169,9 @@ const Index = () => {
                     <span>Gallery</span>
                 </div>
                 <div className={styles.main_third_container_content_card_area}>
-                    <div
-                        className={
-                            styles.main_third_container_content_card_area_left_fade
-                        }
-                    ></div>
                     <div className={styles.main_third_container_content_cards}>
                         <MentorCard />
                     </div>
-                    <div
-                        className={
-                            styles.main_third_container_content_card_area_right_fade
-                        }
-                    ></div>
                 </div>
             </div>
 
