@@ -50,7 +50,7 @@ const Index = () => {
                 />
             </div>
 
-            <div className={styles.team_filter_holder}>
+            {/* <div className={styles.team_filter_holder}>
                 <div>
                     <ConfigProvider
                         theme={{
@@ -75,9 +75,9 @@ const Index = () => {
                         </Space>
                     </ConfigProvider>
                 </div>
-            </div>
+            </div> */}
 
-            {/* <div className={styles.team_grid_holder}>
+            <div className={styles.team_grid_holder}>
                 {Object.keys(TeamList).map((elem, index) => {
                     return (
                         <>
@@ -98,7 +98,7 @@ const Index = () => {
                         </>
                     )
                 })}                
-            </div> */}
+            </div>
         </div>
     );
 }

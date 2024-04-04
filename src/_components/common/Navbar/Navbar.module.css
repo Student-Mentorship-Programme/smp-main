@@ -128,7 +128,7 @@
   width: 35px;
   height: auto;
   position: absolute;
-  top: 28px;
+  top: 19px;
   right: 15px;
 }
 
@@ -170,15 +170,6 @@
 }
 
 @media screen and (max-width: 905px) {
-  .navbar_main {
-    height: 80px;
-  }
-
-  .navbar_main_container {
-    padding: 0 20px;
-    padding-top: 16px;
-  }
-
   .navbar_main_left {
     width: max-content;
   }

@@ -1,6 +1,10 @@
 /* Team Card */
 .team_card_holder{
-    margin: 20px 0;
+    margin: 20px 0; 
+    display: flex;
+    justify-content: center;
+}
+.team_card{
     display: flex;
     flex-direction: column;
     row-gap: 5px;
