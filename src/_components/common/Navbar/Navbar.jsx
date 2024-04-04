@@ -8,7 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 
-const Navbar = ({ transparency }) => {
+const Navbar = ({transparency}) => {
   // console.log(typeof window !== 'undefined');
   const router = useRouter();
   const [activeNavElement, setActiveNavElement] = useState(null);
