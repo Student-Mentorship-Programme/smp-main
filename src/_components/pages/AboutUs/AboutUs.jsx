@@ -39,7 +39,7 @@ const Index = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [isScrolling]);
+  }, [scrollCount, isScrolling]);
 
   return (
     <div className={styles.about_us_main}>
