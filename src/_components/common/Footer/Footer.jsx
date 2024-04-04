@@ -67,7 +67,7 @@ const Footer = () => {
             <div className={styles.footer_middle_content}>
               <div>Help</div>
               <Link href={gmailComposeLink} target="_blank"><span>Contact Us</span></Link>
-              <Link href="/coming-soon" target="_blank"><span>Become a Mentor</span></Link>
+              <Link href="/coming-soon" ><span>Become a Mentor</span></Link>
               
             </div>
             <div className={styles.footer_middle_content}>
