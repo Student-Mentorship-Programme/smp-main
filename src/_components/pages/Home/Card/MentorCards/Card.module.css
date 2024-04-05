@@ -4,8 +4,14 @@
     overflow: hidden;
 }
 
+.slick-slider {
+    display: flex;
+}
+
 .card {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
 }
 
 .image_wrapper {

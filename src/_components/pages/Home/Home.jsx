@@ -9,6 +9,8 @@ import vectorImage from "@/images/vector-image.svg";
 import icon1 from "@/images/pages/home/icon1.svg";
 import icon2 from "@/images/pages/home/icon2.svg";
 import icon3 from "@/images/pages/home/icon3.svg";
+import { useRouter } from "next/navigation";
+import ParticleCanvas from "./ParticleCanvas/ParticleCanvas";
 
 const eventCards = [
     {
@@ -95,6 +97,7 @@ const questionAnswers = [
 ];
 
 const Index = () => {
+    const router = useRouter();
     return (
         <div className={styles.main}>
             {/* First Container */}
@@ -134,7 +137,6 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-
             {/* Second Container */}
             <div className={styles.main_second_container}>
                 <div className={styles.main_second_container_content}>
@@ -158,11 +160,12 @@ const Index = () => {
                     <div
                         className={styles.main_second_container_content_button}
                     >
-                        <button>More about our events</button>
+                        <button onClick={() => router.push("/events")}>
+                            More about our events
+                        </button>
                     </div>
                 </div>
             </div>
-
             {/* Third Container */}
             <div className={styles.main_third_container}>
                 <div className={styles.main_third_container_content_heading}>
@@ -174,7 +177,6 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-
             {/* Fourth Container */}
             <div className={styles.main_fourth_container}>
                 <div className={styles.main_fourth_container_content}>

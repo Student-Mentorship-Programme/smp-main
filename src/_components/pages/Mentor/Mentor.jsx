@@ -8,7 +8,7 @@ const chartData = {
     datasets: [
         {
             label: "Gender",
-            data: [300, 100],
+            data: [152, 54],
             backgroundColor: ["rgb(255, 99, 132)", "rgb(255, 205, 86)"],
             hoverOffset: 4,
         },
@@ -21,31 +21,10 @@ const Index = () => {
     const [count2, setCount2] = useState(0);
     const [count3, setCount3] = useState(0);
 
-    const readXLSXFile = (filePath) => {
-        const file = fs.readFileSync(filePath);
-        const workbook = XLSX.read(file, { type: "buffer" });
-        const sheetName = workbook.SheetNames[0];
-        const worksheet = workbook.Sheets[sheetName];
-        const rows = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-
-        let maleCount = 0;
-        let femaleCount = 0;
-        for (let i = 1; i < rows.length; i++) {
-            const gender = rows[i][8];
-            if (gender === "Male") {
-                maleCount++;
-            } else if (gender === "Female") {
-                femaleCount++;
-            }
-        }
-        setCount1(maleCount);
-        setCount2(femaleCount);
-    };
-
     useEffect(() => {
-        const targetCount1 = 100;
-        const targetCount2 = 200;
-        const targetCount3 = 300;
+        const targetCount1 = 206;
+        const targetCount2 = 152;
+        const targetCount3 = 54;
 
         const duration = 3000;
 
@@ -96,9 +75,9 @@ const Index = () => {
                     <table>
                         <thead>
                             <tr>
-                                <th>Something</th>
-                                <th>Something</th>
-                                <th>Something</th>
+                                <th>Mentors in 2024</th>
+                                <th>Male Mentors</th>
+                                <th>Female Mentors</th>
                             </tr>
                         </thead>
                         <tbody>
