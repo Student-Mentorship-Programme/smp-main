@@ -14,21 +14,21 @@ import ParticleCanvas from "./ParticleCanvas/ParticleCanvas";
 
 const eventCards = [
     {
-        title: "Cross Mentorship",
+        title: "AMP",
         description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste quia animi eum deleniti alias natus commodi temporibus amet ipsa.",
+            "Alumni Mentorship Program bridges the gap between current students and esteemed college alumni, offering invaluable guidance, support, and mentorship. From career advice to personal development tips, our alumni mentors empower students to navigate their academic and professional journeys with confidence.",
         icon: icon1,
     },
     {
-        title: "Cross Mentorship",
+        title: "Career Talks",
         description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste quia animi eum deleniti alias natus commodi temporibus amet ipsa.",
+            "SMP organizes regular career talks where professionals from various industries share insights, trends, and opportunities in their respective fields. These talks help students gain valuable knowledge about different career paths and make informed decisions about their future.",
         icon: icon2,
     },
     {
-        title: "Cross Mentorship",
+        title: "Mentor Workshop",
         description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste quia animi eum deleniti alias natus commodi temporibus amet ipsa.",
+            "The Mentor Workshop, organized by the Student Mentorship Program (SMP), is a pivotal event designed to equip mentors with the strategies and insights necessary to excel in their role. Through interactive sessions and guidance, mentors undergo comprehensive training, fostering a supportive community committed to student success.",
         icon: icon3,
     },
 ];
