@@ -34,10 +34,38 @@ const Index = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: false });
+    const handleTouchStart = (event) => {
+      touchStartY.current = event.touches[0].clientY;
+    };
+
+    const handleTouchMove = (event) => {
+      event.preventDefault();
+      const touchEndY = event.touches[0].clientY;
+      const deltaY = touchStartY.current - touchEndY;
+
+      if (!isScrolling) {
+        setIsScrolling(true);
+
+        if (deltaY > 0 && scrollCount < 3) {
+          setScrollCount((prevCount) => prevCount + 1);
+        } else if (deltaY < 0 && scrollCount > 0) {
+          setScrollCount((prevCount) => prevCount - 1);
+        }
+
+        setTimeout(() => {
+          setIsScrolling(false);
+        }, 1000);
+      }
+    };
+
+    window.addEventListener("wheel", handleScroll, { passive: false });
+    window.addEventListener("touchstart", handleTouchStart, { passive: false });
+    window.addEventListener("touchmove", handleTouchMove, { passive: false });
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("wheel", handleScroll);
+      window.removeEventListener("touchstart", handleTouchStart);
+      window.removeEventListener("touchmove", handleTouchMove);
     };
   }, [scrollCount, isScrolling]);
 
