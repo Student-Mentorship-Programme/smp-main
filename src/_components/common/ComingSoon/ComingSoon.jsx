@@ -3,7 +3,7 @@ import styles from "./ComingSoon.module.css";
 import mainImage from "@/images/pages/coming-soon/coming_soon.svg";
 import Image from "next/image";
 
-function Index() {
+function ComingSoon() {
   return (
     <div className={styles.heroSection}>
       <Image src={mainImage} alt="Coming Soon" ></Image>
@@ -12,4 +12,4 @@ function Index() {
   );
 }
 
-export default Index;
+export default ComingSoon;

@@ -1,9 +1,12 @@
 "use client"
 import React from 'react'
+import ComingSoon from '@/_components/common/ComingSoon/ComingSoon'
 
 const Blogs = () => {
     return (
-        <div>Blogs</div>
+        <div>
+            <ComingSoon/>
+        </div>
     )
 }
 
