@@ -12,7 +12,7 @@ import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const pathname = usePathname();
-  if (pathname == "/about-us") {
+  if (pathname == "/about-us" && window.innerWidth >= 906) {
     return <></>;
   }
   const recipientEmail = "smp.iitr.ac.in";

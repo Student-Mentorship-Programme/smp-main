@@ -58,9 +58,11 @@ const Index = () => {
       }
     };
 
-    window.addEventListener("wheel", handleScroll, { passive: false });
-    window.addEventListener("touchstart", handleTouchStart, { passive: false });
-    window.addEventListener("touchmove", handleTouchMove, { passive: false });
+    if (window.innerWidth >= 906) {
+      window.addEventListener("wheel", handleScroll, { passive: false });
+      window.addEventListener("touchstart", handleTouchStart, { passive: false });
+      window.addEventListener("touchmove", handleTouchMove, { passive: false });
+    }
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
