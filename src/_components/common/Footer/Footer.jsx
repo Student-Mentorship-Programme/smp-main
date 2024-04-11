@@ -9,14 +9,18 @@ import facebookIcon from "@/images/common/footer/facebookIcon.svg";
 import linkedinIcon from "@/images/common/footer/linkedinIcon.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 const Footer = () => {
   const pathname = usePathname();
-  useEffect(() => {
-    if (pathname == "/about-us" && window.innerWidth >= 906) {
-      return <></>;
-    }},[]);
+  useLayoutEffect(() => {
+    if (pathname === "/about-us"
+      && window.innerWidth >= 906
+    ) {
+      let footer_body = document.getElementsByClassName(styles.footer)[0];
+      footer_body.style.display = "none";
+    }
+  }, [pathname]);
   const recipientEmail = "smp.iitr.ac.in";
 
   const gmailComposeLink = `mailto:${recipientEmail}`;
