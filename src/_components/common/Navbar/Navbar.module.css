@@ -88,13 +88,16 @@
   /* color: rgba(0, 0, 0, 0.5); */
 }
 
-.navbar_about_us_button {
+
+.navbar_about_us_button{
+
   background-color: #ffffff;
   color: #063143;
   border: 1px solid #063143;
   padding: 8px 25px;
   font-size: 1.1rem;
   border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .navbar_about_us_button:hover {
@@ -103,13 +106,17 @@
   color: #ffffff;
 }
 
-.navbar_about_us_button_transparent {
-  background: transparent;
+
+.navbar_about_us_button_transparent{
+  background-color:transparent;
   color: rgb(202, 202, 202);
-  border: 2px solid rgb(202, 202, 202);
+  border: 1px solid rgb(202, 202, 202);
   padding: 8px 25px;
+  white-space: nowrap;
   font-size: 1.1rem;
   border-radius: 8px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
 }
 
 .navbar_about_us_button_transparent:hover {

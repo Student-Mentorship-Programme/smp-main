@@ -9,10 +9,13 @@
 .heroSection h1 {
   font-size: 5vw;
   font-weight: 900;
+  margin-bottom: 100px;
 }
 
 .heroSection img {
-  width: 50vw;
+  margin-top: 120px;
+  
+  width: 300px;
   height: auto;
 }
 
@@ -28,6 +31,5 @@
   }
   .heroSection h1 {
     font-size: 8vw;
-    margin-bottom: 100px;
   }
 }

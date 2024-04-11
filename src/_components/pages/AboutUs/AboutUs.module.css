@@ -224,6 +224,17 @@
   border-radius: 18px;
 }
 
+/* ---------------------------------------------TABLET VIEW-------------------------------------------------------------- */
+@media screen and (max-width: 905px){
+  .about_us_main{
+    height: auto;
+    overflow: scroll;
+  }
+  .slide_container:not(:first-child) {
+    height: 80vh;
+  }
+}
+
 /* ---------------------------------------------MOBILE VIEW-------------------------------------------------------------- */
 
 @media only screen and (max-width: 576px) {
