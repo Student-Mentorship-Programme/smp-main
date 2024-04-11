@@ -9,12 +9,14 @@ import facebookIcon from "@/images/common/footer/facebookIcon.svg";
 import linkedinIcon from "@/images/common/footer/linkedinIcon.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect } from "react";
 
 const Footer = () => {
   const pathname = usePathname();
-  if (pathname == "/about-us" && window.innerWidth >= 906) {
-    return <></>;
-  }
+  useEffect(() => {
+    if (pathname == "/about-us" && window.innerWidth >= 906) {
+      return <></>;
+    }},[]);
   const recipientEmail = "smp.iitr.ac.in";
 
   const gmailComposeLink = `mailto:${recipientEmail}`;
@@ -68,7 +70,7 @@ const Footer = () => {
               <div>Help</div>
               <Link href={gmailComposeLink} target="_blank"><span>Contact Us</span></Link>
               <Link href="/coming-soon" ><span>Become a Mentor</span></Link>
-              
+
             </div>
             <div className={styles.footer_middle_content}>
               <div>Visit</div>

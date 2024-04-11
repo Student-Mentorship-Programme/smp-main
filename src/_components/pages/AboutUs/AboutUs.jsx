@@ -58,7 +58,7 @@ const Index = () => {
       }
     };
 
-    if (window.innerWidth >= 906) {
+    if (window?.innerWidth >= 906) {
       window.addEventListener("wheel", handleScroll, { passive: false });
       window.addEventListener("touchstart", handleTouchStart, { passive: false });
       window.addEventListener("touchmove", handleTouchMove, { passive: false });
