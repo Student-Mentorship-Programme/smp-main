@@ -3,179 +3,42 @@ import styles from "./main.module.css";
 import Image from 'next/image';
 import TeamImage from "@/images/pages/team/TeamPage.jpg";
 import TeamCard from './TeamCard';
+import { TeamList } from './TeamList';
+import { Tabs } from 'antd';
+import { ConfigProvider, Space } from 'antd';
 
-// Test Import Images
-import Shrey from "@/images/pages/team/Shrey.jpg";
-import Piyush from "@/images/pages/team/Piyush.jpg";
-import Kushagra from "@/images/pages/team/Kushagra.jpg";
-
-const TeamInfo = {
-    "secretaries": [
-        {
-            name: "Shrey Agrawal",
-            position: "Chief Secretary",
-            image: Shrey
-        },
-        {
-            name: "Kushagra Chandiya",
-            position: "Additional Secretary Planning and Strategy",
-            image: Kushagra
-        },
-        {
-            name: "Piyush Agarwal",
-            position: "Additional Secretary Administration",
-            image: Piyush
-        },
-        {
-            name: "Shrey Agrawal",
-            position: "Chief Secretary",
-            image: Shrey
-        },
-        {
-            name: "Kushagra Chandiya",
-            position: "Additional Secretary Planning and Strategy",
-            image: Kushagra
-        },
-        {
-            name: "Piyush Agarwal",
-            position: "Additional Secretary Administration",
-            image: Piyush
-        },
-        {
-            name: "Shrey Agrawal",
-            position: "Chief Secretary",
-            image: Shrey
-        },
-        {
-            name: "Kushagra Chandiya",
-            position: "Additional Secretary Planning and Strategy",
-            image: Kushagra
-        },
-        {
-            name: "Piyush Agarwal",
-            position: "Additional Secretary Administration",
-            image: Piyush
-        },
-        {
-            name: "Shrey Agrawal",
-            position: "Chief Secretary",
-            image: Shrey
-        },
-        {
-            name: "Kushagra Chandiya",
-            position: "Additional Secretary Planning and Strategy",
-            image: Kushagra
-        },
-    ],
-    "team-members": [
-        {
-            category: "Senior Executive Members",
-            members:
-                [
-                    "Abhinav Kumar Singh",
-                    "Eshu",
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh"
-                ],
-        },
-        {
-            category: "Operations Manager",
-            members:
-                [
-                    "Abhinav Kumar Singh",
-                    "Eshu",
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh",
-                    "Abhinav Kumar Singh",
-                    "Eshu",
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh",
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh",
-                ],
-        },
-        {
-            category: "Events Coordinator",
-            members:
-                [
-                    "Abhinav Kumar Singh",
-                    "Eshu",
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh"
-                ],
-        },
-        {
-            category: "Developer",
-            members:
-                [
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh"
-                ],
-        },
-        {
-            category: "Senior Executive Members",
-            members:
-                [
-                    "Abhinav Kumar Singh",
-                    "Eshu",
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh"
-                ],
-        },
-        {
-            category: "Operations Manager",
-            members:
-                [
-                    "Abhinav Kumar Singh",
-                    "Eshu",
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh",
-                    "Abhinav Kumar Singh",
-                    "Eshu",
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh",
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh",
-                ],
-        },
-        {
-            category: "Events Coordinator",
-            members:
-                [
-                    "Abhinav Kumar Singh",
-                    "Eshu",
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh"
-                ],
-        },
-        {
-            category: "Developer",
-            members:
-                [
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh"
-                ],
-        },
-        {
-            category: "Events Coordinator",
-            members:
-                [
-                    "Abhinav Kumar Singh",
-                    "Eshu",
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh"
-                ],
-        },
-        {
-            category: "Developer",
-            members:
-                [
-                    "Anirudh Venkata Ganesh Mangudy",
-                    "Randeep Singh"
-                ],
-        },
-    ]
-}
+const TeamPageFilterTab = [
+    {
+        label: `All`,
+        key: 1,
+        children: ``,
+    },
+    {
+        label: `Secretaries`,
+        key: 2,
+        children: ``,
+    },
+    {
+        label: `Developers`,
+        key: 3,
+        children: ``,
+    },
+    {
+        label: `Content and Design`,
+        key: 4,
+        children: ``,
+    },
+    {
+        label: `Events`,
+        key: 5,
+        children: ``,
+    },
+    {
+        label: `Operations`,
+        key: 6,
+        children: ``,
+    },
+]
 
 const Index = () => {
     return (
@@ -187,54 +50,54 @@ const Index = () => {
                 />
             </div>
 
-            <div className={styles.team_filter_holder}>
-                <div className={styles.team_filter}>
-                    <button>All</button>
-                    <button>Secretaries</button>
-                    <button>Developers</button>
-                    <button>Content and Design</button>
+            {/* <div className={styles.team_filter_holder}>
+                <div>
+                    <ConfigProvider
+                        theme={{
+                            components: {
+                                Tabs: {
+                                    itemHoverColor: "red",
+                                    itemSelectedColor: "red",
+                                    inkBarColor: "red",
+                                    fontSize: "15px"
+                                }
+                            }
+                        }}
+                    >
+                        <Space>
+                            <Tabs
+                                defaultActiveKey="1"
+                                centered
+                                size='2rem'
+                                tabBarGutter={"3rem"}
+                                items={TeamPageFilterTab}
+                            />
+                        </Space>
+                    </ConfigProvider>
                 </div>
-            </div>
+            </div> */}
 
             <div className={styles.team_grid_holder}>
-                <div className={styles.team_grid_top}>
-                    <h2>
-                        {`Secretaries`}
-                    </h2>
-                    <hr />
-                </div>
-                <div className={styles.team_grid_secy}>
-                    {
-                        TeamInfo["secretaries"]?.map((elem, index) => {
-                            return <TeamCard elem={elem} key={`team-secy-key-${index}`}/>
-                        })
-                    }
-                </div>
-
-                <div className={styles.team_grid_top + " " + styles.team_grid_top_members}>
-                    <h2>
-                        {`Team Members`}
-                    </h2>
-                    <hr />
-                </div>
-                <div className={styles.team_grid_members}>
-                    {
-                        TeamInfo["team-members"]?.map((elem, index) => {
-                            return (
-                                <div key={`team-members-${index}`}>
-                                    <div className={styles.team_grid_members_head}>{elem.category}</div>
-                                    {elem?.members?.map((member,index2)=>{
-                                        return(
-                                            <div className={styles.team_grid_members_elem} key={`team-members-elem-${elem.category}-${index2}`}>
-                                                {member}
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                            )
-                        })
-                    }
-                </div>
+                {Object.keys(TeamList).map((elem, index) => {
+                    return (
+                        <>
+                            <div className={styles.team_grid_top}>
+                                <hr />
+                                <h2>
+                                    {elem.charAt(0).toUpperCase() + elem.slice(1)}
+                                </h2>
+                                <hr />
+                            </div>
+                            <div className={styles.team_grid_list}>
+                                {
+                                    TeamList[elem]?.map((data, index2) => {
+                                        return <TeamCard elem={data} key={`team-secy-key-${index2}`} />
+                                    })
+                                }
+                            </div>
+                        </>
+                    )
+                })}                
             </div>
         </div>
     );
