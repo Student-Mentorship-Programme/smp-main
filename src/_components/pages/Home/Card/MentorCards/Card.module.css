@@ -1,8 +1,21 @@
 .card_container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slick-slider {
     display: flex;
-    flex-direction: column;
-    min-width: 368px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    margin-right: 24px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+}
+
+.image_wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
 }

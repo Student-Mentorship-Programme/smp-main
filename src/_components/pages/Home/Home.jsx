@@ -7,25 +7,29 @@ import QnACard from "@pages/Home/Card/QnACards/Card";
 import MentorCard from "@pages/Home/Card/MentorCards/Card";
 import vectorImage from "@/images/vector-image.svg";
 import icon1 from "@/images/pages/home/icon1.svg";
+import icon2 from "@/images/pages/home/icon2.svg";
+import icon3 from "@/images/pages/home/icon3.svg";
+import { useRouter } from "next/navigation";
+import ParticleCanvas from "./ParticleCanvas/ParticleCanvas";
 
 const eventCards = [
     {
-        title: "Cross Mentorship",
+        title: "AMP",
         description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste quia animi eum deleniti alias natus commodi temporibus amet ipsa.",
+            "Alumni Mentorship Program bridges the gap between current students and esteemed college alumni, offering invaluable guidance, support, and mentorship. From career advice to personal development tips, our alumni mentors empower students to navigate their academic and professional journeys with confidence.",
         icon: icon1,
     },
     {
-        title: "Cross Mentorship",
+        title: "Career Talks",
         description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste quia animi eum deleniti alias natus commodi temporibus amet ipsa.",
-        icon: icon1,
+            "SMP organizes regular career talks where professionals from various industries share insights, trends, and opportunities in their respective fields. These talks help students gain valuable knowledge about different career paths and make informed decisions about their future.",
+        icon: icon2,
     },
     {
-        title: "Cross Mentorship",
+        title: "Mentor Workshop",
         description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim iste quia animi eum deleniti alias natus commodi temporibus amet ipsa.",
-        icon: icon1,
+            "The Mentor Workshop, organized by the Student Mentorship Program (SMP), is a pivotal event designed to equip mentors with the strategies and insights necessary to excel in their role. Through interactive sessions and guidance, mentors undergo comprehensive training, fostering a supportive community committed to student success.",
+        icon: icon3,
     },
 ];
 
@@ -93,6 +97,7 @@ const questionAnswers = [
 ];
 
 const Index = () => {
+    const router = useRouter();
     return (
         <div className={styles.main}>
             {/* First Container */}
@@ -132,7 +137,6 @@ const Index = () => {
                     </div>
                 </div>
             </div>
-
             {/* Second Container */}
             <div className={styles.main_second_container}>
                 <div className={styles.main_second_container_content}>
@@ -156,29 +160,23 @@ const Index = () => {
                     <div
                         className={styles.main_second_container_content_button}
                     >
-                        <button>More about our events</button>
+                        <button onClick={() => router.push("/events")}>
+                            More about our events
+                        </button>
                     </div>
                 </div>
             </div>
-
             {/* Third Container */}
-            {/* <div className={styles.main_third_container}>
+            <div className={styles.main_third_container}>
                 <div className={styles.main_third_container_content_heading}>
-                    <span>Hear from our Mentors</span>
+                    <span>Gallery</span>
                 </div>
                 <div className={styles.main_third_container_content_card_area}>
-                    <div className={styles.main_third_container_content_card_area_left_fade}></div>
                     <div className={styles.main_third_container_content_cards}>
-                        {
-                            Array.from(Array(6)).map((_,index)=>{
-                                return <MentorCard />
-                            })
-                        }
+                        <MentorCard />
                     </div>
-                    <div className={styles.main_third_container_content_card_area_right_fade}></div>
                 </div>
-            </div> */}
-
+            </div>
             {/* Fourth Container */}
             <div className={styles.main_fourth_container}>
                 <div className={styles.main_fourth_container_content}>

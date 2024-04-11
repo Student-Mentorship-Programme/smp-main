@@ -1,12 +1,16 @@
-import React from 'react';
-import styles from './Card.module.css';
-import Image from 'next/image';
+"use client";
+import React from "react";
+import styles from "./Card.module.css";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Card = ({ title, description, icon }) => {
-    const maxLength = 130;
+    const router = useRouter();
+    const maxLength = 128;
     const truncateDescription = (text) => {
         if (text.length > maxLength) {
-            return text.substring(0, maxLength) + '...';
+            return text.substring(0, maxLength) + "...";
         }
         return text;
     };
@@ -23,7 +27,7 @@ const Card = ({ title, description, icon }) => {
                 {truncateDescription(description)}
             </div>
             <div className={styles.card_container_learn_more}>
-                <a href="/">Learn more</a>
+                <Link href={"/events"}>Learn more</Link>
             </div>
         </div>
     );
