@@ -1,6 +1,6 @@
 .about_us_main {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 .about_us_main::-webkit-scrollbar {
