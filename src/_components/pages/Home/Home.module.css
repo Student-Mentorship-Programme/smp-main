@@ -70,8 +70,8 @@
 /* Second Section */
 
 .main_second_container {
-    display: flex;
-    /* display: none; */
+    /* display: flex; */
+    display: none;
     align-items: center;
 }
 
