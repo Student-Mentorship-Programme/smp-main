@@ -127,13 +127,6 @@ const Index = () => {
                             incoming freshmen with experienced mentors from the
                             pre-final or final year, nurturing a supportive
                             ecosystem for growth and development.
-                            {/* <br /> <br />
-                            At SMP, we go beyond conventional mentorship by
-                            cultivating a dynamic environment ripe for engaging
-                            discussions, personalized guidance, and one-on-one
-                            counseling. Our aim is to bridge the gap between
-                            seniors and juniors, promoting open communication,
-                            mutual respect, and collaborative learning. */}
                         </div>
                         <div
                             className={
