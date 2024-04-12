@@ -3,13 +3,51 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./Mentor.module.css";
 import ChartComponent from "./ChartComponent/ChartComponent";
 
-const chartData = {
-    labels: ["Male", "Female"],
+const MentorChartData = {
+    labels: ["Mentees", "Mentors", "Meets"],
     datasets: [
         {
-            label: "Gender",
-            data: [152, 54],
-            backgroundColor: ["rgb(255, 99, 132)", "rgb(255, 205, 86)"],
+            label: "Mentorship Stats",
+            data: [206, 152, 54],
+            backgroundColor: [
+                "rgb(255, 99, 132)",
+                "rgb(255, 205, 86)",
+                "rgb(75, 192, 192)",
+            ],
+            hoverOffset: 4,
+        },
+    ],
+};
+
+const chartData = {
+    labels: [
+        "CSE",
+        "EE",
+        "ECE",
+        "MIED",
+        "Civil",
+        "Chemical",
+        "Earth Science",
+        "EPH",
+        "Meta",
+        "Others",
+    ],
+    datasets: [
+        {
+            label: "Mentors",
+            data: [38, 42, 27, 45, 37, 200, 18, 14, 21, 119],
+            backgroundColor: [
+                "rgb(66, 133, 244)",
+                "rgb(219, 68, 55)",
+                "rgb(244, 180, 0)",
+                "rgb(15, 157, 88)",
+                "rgb(255, 0, 216)",
+                "rgb(67, 73, 210)",
+                "rgb(247, 120, 40)",
+                "rgb(27, 218, 187)",
+                "rgb(164, 0, 247)",
+                "rgb(239, 216, 5)",
+            ],
             hoverOffset: 4,
         },
     ],
@@ -137,7 +175,7 @@ const Index = () => {
                 </div>
                 <div className={styles.mentor_page_main_charts}>
                     <div className={styles.mentor_page_main_pie_charts}>
-                        <ChartComponent data={chartData} />
+                        <ChartComponent data={MentorChartData} />
                     </div>
                     <div className={styles.mentor_page_main_bar_charts}>
                         <ChartComponent data={chartData} />
