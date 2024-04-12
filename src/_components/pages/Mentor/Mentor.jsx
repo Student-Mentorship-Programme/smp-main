@@ -15,6 +15,52 @@ const chartData = {
     ],
 };
 
+// Dummy Data for now
+const dummyMentorData = [
+    {
+        name: "John Doe",
+        enrollmentId: "2021001",
+        branch: "Computer Science",
+        year: "3",
+        interest: "Machine Learning",
+    },
+    {
+        name: "Alice Smith",
+        enrollmentId: "2021002",
+        branch: "Electrical Engineering",
+        year: "2",
+        interest: "Robotics",
+    },
+    {
+        name: "Bob Johnson",
+        enrollmentId: "2021003",
+        branch: "Mechanical Engineering",
+        year: "4",
+        interest: "Automotive Engineering",
+    },
+    {
+        name: "Emily Brown",
+        enrollmentId: "2021004",
+        branch: "Civil Engineering",
+        year: "3",
+        interest: "Structural Engineering",
+    },
+    {
+        name: "Michael Wilson",
+        enrollmentId: "2021005",
+        branch: "Chemical Engineering",
+        year: "2",
+        interest: "Biotechnology",
+    },
+    {
+        name: "Sophia Garcia",
+        enrollmentId: "2021006",
+        branch: "Aerospace Engineering",
+        year: "4",
+        interest: "Astronautics",
+    },
+];
+
 const Index = () => {
     const text = "Search by name, enrollment number or branch";
     const [count1, setCount1] = useState(0);
