@@ -133,7 +133,9 @@ const Index = () => {
                                 styles.main_first_container_content_title_area_button
                             }
                         >
-                            <button>Learn more</button>
+                            <button onClick={() => router.push("/about-us")}>
+                                Learn more
+                            </button>
                         </div>
                     </div>
                     <div className={styles.main_first_container_image}>
