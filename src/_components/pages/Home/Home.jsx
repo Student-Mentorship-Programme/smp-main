@@ -120,13 +120,20 @@ const Index = () => {
                                 styles.main_first_container_content_title_area_description
                             }
                         >
-                            Student Mentorship Program is one of the largest
-                            on-campus student body initiatives which assigns a
-                            mentor (a Pre-Final or Final year student) to all
-                            the freshmen within the same branch. It ensures
-                            bridging the communication gap between them by
-                            providing a dynamic environment for healthy
-                            discussion, guidance and one-to-one counselling.
+                            Welcome to the Student Mentorship Program (SMP), a
+                            cornerstone initiative fostering meaningful bonds
+                            between students across all academic levels.
+                            Anchored by the principle of peer support, SMP pairs
+                            incoming freshmen with experienced mentors from the
+                            pre-final or final year, nurturing a supportive
+                            ecosystem for growth and development.
+                            {/* <br /> <br />
+                            At SMP, we go beyond conventional mentorship by
+                            cultivating a dynamic environment ripe for engaging
+                            discussions, personalized guidance, and one-on-one
+                            counseling. Our aim is to bridge the gap between
+                            seniors and juniors, promoting open communication,
+                            mutual respect, and collaborative learning. */}
                         </div>
                         <div
                             className={
