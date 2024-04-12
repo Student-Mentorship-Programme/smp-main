@@ -128,7 +128,11 @@ const Index = () => {
                             providing a dynamic environment for healthy
                             discussion, guidance and one-to-one counselling.
                         </div>
-                        <div>
+                        <div
+                            className={
+                                styles.main_first_container_content_title_area_button
+                            }
+                        >
                             <button>Learn more</button>
                         </div>
                     </div>

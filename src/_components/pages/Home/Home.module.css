@@ -39,7 +39,7 @@
     margin: 0 0 25px 0;
 }
 
-.main_first_container_content_title_area div button {
+.main_first_container_content_title_area_button button {
     padding: 9px 25px;
     border-radius: 12px;
     background-color: #063143;
@@ -69,11 +69,12 @@
 /* Second Section */
 
 .main_second_container {
-    display: flex;
+    /* display: flex; */
+    display: none;
     justify-content: center;
     align-items: center;
     height: 80vh;
-    margin: 0 0 200px 0;
+    margin: 0 0 100px 0;
 }
 
 .main_second_container_content_heading {
@@ -125,6 +126,7 @@
 
 .main_third_container {
     display: flex;
+    /* display: none; */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -176,6 +178,7 @@
 
 .main_fourth_container {
     display: flex;
+    /* display: none; */
     justify-content: center;
     align-items: flex-end;
     padding: 0 0 50px 0;
@@ -221,3 +224,27 @@
     color: black;
     text-decoration: underline;
   } */
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .main_first_container_content {
+        width: 100%;
+    }
+
+    .main_first_container_content_title_area {
+        width: 80%;
+    }
+
+    .main_first_container_content_title_area_button button {
+        padding: 9px 20px;
+        border-radius: 16px;
+    }
+
+    .main_first_container_image {
+        display: none;
+    }
+
+    .main_fourth_container_content_heading {
+        flex-wrap: wrap;
+    }
+}

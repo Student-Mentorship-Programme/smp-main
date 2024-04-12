@@ -65,13 +65,12 @@
     align-items: flex-start;
 } */
 
-
 .card_container {
     border: 1px solid #e8e8e8;
     border-radius: 1rem;
     padding: 0.7rem 0.75rem 0.7rem 1rem;
     margin-bottom: 1rem;
-    width: 55%;
+    width: 60%;
     box-sizing: border-box;
 }
 
@@ -96,4 +95,22 @@
 
 .answer.opened {
     margin: 5px 0;
+}
+
+@media screen and (max-width: 992px) {
+    .card_container {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card_container {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card_container {
+        width: 95%;
+    }
 }
