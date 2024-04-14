@@ -15,7 +15,6 @@
 .events_main_heading span {
     font-size: 35px;
     font-weight: 600;
-    /* text-decoration: underline; */
 }
 
 .event_card {
@@ -23,7 +22,6 @@
     justify-content: space-evenly;
     width: 100%;
     margin: 60px 0;
-    flex-wrap: wrap;
 }
 
 .event_card:last-child {
@@ -53,23 +51,23 @@
     margin-bottom: 17.5px;
 }
 
-.event_card_content_main {
+/* .event_card_content_main {
     font-size: 18px;
     display: flex;
 }
 
 .event_card_content_main_date {
     margin-right: 10px;
-}
+} */
 
-.event_card_content_main ul {
+/* .event_card_content_main ul {
     display: flex;
     padding-left: 20px;
 }
 
 .event_card_content_main ul li {
     margin-right: 25px;
-}
+} */
 
 .event_card_content_main_description {
     margin: 7px 0 20px 0;
@@ -103,4 +101,82 @@
 
 .event_card_content button:hover {
     cursor: pointer;
+}
+
+/* ------------------------------ Desktop Break Point ---------------------------------------------- */
+@media screen and (max-width:1195px) {
+    .event_card {
+        justify-content: space-evenly;
+        margin: 25px 0;
+    }
+    .event_card_content {
+        width: 60%;
+    }
+    .event_card_image {
+        width: 270px;
+    }
+}
+
+/* ------------------------------ Big Tablet Break Point ---------------------------------------------- */
+@media screen and (max-width:912px) {
+    .event_card {
+        justify-content: space-between;
+    }
+}
+
+
+/* ------------------------------ Tablet Break Point ---------------------------------------------- */
+@media screen and (max-width:768px) {
+    .event_card {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+
+    .event_card_content {
+        width: 100%;
+        margin: 0;
+    }
+
+    .odd .event_card_content {
+        order: 2;
+    }
+
+    .odd .event_card_image {
+        order: 1;
+    }
+    .event_card_image{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .event_card_image img{
+        width: 50%;
+    }
+    .event_card_content_main_description{
+        text-align: center;
+    }
+    .event_card_content_title {
+        width: 100%;
+        text-align: center;
+    }
+    .event_card:last-child {
+        margin-bottom: 40px;
+    }
+}
+
+/* ------------------------------ Mobile Break Point ---------------------------------------------- */
+@media screen and (max-width:502px) {
+    .event_card_image img{
+        width: 80%;
+    }
+    .event_card_content_title {
+        font-size: 24px;
+    }
+    .event_card_content_main_description span{
+        font-size: 16px;
+    }
+    .events_main {
+        padding: 75px 10px;
+    }
 }
