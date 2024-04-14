@@ -3,23 +3,39 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./Mentor.module.css";
 import ChartComponent from "./ChartComponent/ChartComponent";
 
-const MentorChartData = {
-    labels: ["Mentees", "Mentors", "Meets"],
+const companyChartData = {
+    labels: [
+        "SDE",
+        "Quant",
+        "Design",
+        "Data Analyst",
+        "Data",
+        "Core",
+        "Consulting",
+        "Analyst",
+        "Others",
+    ],
     datasets: [
         {
             label: "Mentorship Stats",
-            data: [206, 152, 54],
+            data: [120, 4, 6, 10, 20, 48, 8, 35, 20],
             backgroundColor: [
                 "rgb(255, 99, 132)",
                 "rgb(255, 205, 86)",
                 "rgb(75, 192, 192)",
+                "rgb(244, 180, 0)",
+                "rgb(15, 157, 88)",
+                "rgb(255, 0, 216)",
+                "rgb(67, 73, 210)",
+                "rgb(247, 120, 40)",
+                "rgb(164, 0, 247)",
             ],
             hoverOffset: 4,
         },
     ],
 };
 
-const chartData = {
+const branchMentorChartData = {
     labels: [
         "CSE",
         "EE",
@@ -106,9 +122,9 @@ const Index = () => {
     const [count3, setCount3] = useState(0);
 
     useEffect(() => {
-        const targetCount1 = 206;
-        const targetCount2 = 152;
-        const targetCount3 = 54;
+        const targetCount1 = 1920;
+        const targetCount2 = 610;
+        const targetCount3 = 381;
 
         const duration = 3000;
 
@@ -159,9 +175,9 @@ const Index = () => {
                     <table>
                         <thead>
                             <tr>
-                                <th>Mentors in 2024</th>
-                                <th>Male Mentors</th>
-                                <th>Female Mentors</th>
+                                <th>Mentees</th>
+                                <th>Meets</th>
+                                <th>Mentors</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -175,10 +191,12 @@ const Index = () => {
                 </div>
                 <div className={styles.mentor_page_main_charts}>
                     <div className={styles.mentor_page_main_pie_charts}>
-                        <ChartComponent data={MentorChartData} />
+                        <ChartComponent data={branchMentorChartData} />
+                        <span>Branch Distribution of Mentors</span>
                     </div>
                     <div className={styles.mentor_page_main_bar_charts}>
-                        <ChartComponent data={chartData} />
+                        <ChartComponent data={companyChartData} />
+                        <span>Company Distribution by Profile</span>
                     </div>
                 </div>
             </div>

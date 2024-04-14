@@ -20,8 +20,19 @@ const ChartComponent = ({ data }) => {
                     plugins: {
                         tooltip: {
                             callbacks: {
+                                // label: function (context) {
+                                //     return `${context.label}: ${context.raw}`;
+                                // },
                                 label: function (context) {
-                                    return `${context.label}: ${context.raw}`;
+                                    const total = context.dataset.data.reduce(
+                                        (acc, curr) => acc + curr,
+                                        0
+                                    );
+                                    const percentage = (
+                                        (context.raw / total) *
+                                        100
+                                    ).toFixed(2);
+                                    return `${context.label}: ${percentage}%`;
                                 },
                             },
                         },
