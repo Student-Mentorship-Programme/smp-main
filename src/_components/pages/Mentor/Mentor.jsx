@@ -27,6 +27,7 @@ const companyChartData = {
                 "rgb(15, 157, 88)",
                 "rgb(255, 0, 216)",
                 "rgb(67, 73, 210)",
+                "rgb(247, 120, 40)",
                 "rgb(164, 0, 247)",
             ],
             hoverOffset: 4,
