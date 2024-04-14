@@ -72,6 +72,7 @@
 .main_second_container {
     display: flex;
     align-items: center;
+    margin-bottom: 80px;
 }
 
 .main_second_container_content {
