@@ -1,12 +1,13 @@
 /* Main Body */
 .main {
     background-color: #ffffff;
-    padding: 10px 0px 100px 0;
+    padding: 10px 0px 10px 0;
 }
 /* First Section */
 
 .main_first_container {
     display: flex;
+    /* display: none; */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -66,15 +67,18 @@
     width: 100%;
 }
 
-/* Second Section */
+/* -----------------------Second Section---------------------- */
 
 .main_second_container {
-    /* display: flex; */
-    display: none;
-    justify-content: center;
+    display: flex;
     align-items: center;
-    height: 80vh;
-    margin: 0 0 100px 0;
+}
+
+.main_second_container_content {
+    display: flex;
+    /* display: none; */
+    flex-direction: column;
+    align-items: center;
 }
 
 .main_second_container_content_heading {
@@ -229,10 +233,13 @@
 @media screen and (max-width: 768px) {
     .main_first_container_content {
         width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .main_first_container_content_title_area {
         width: 85%;
+        order: 2;
     }
 
     .main_first_container_content_title_area_button button {
@@ -241,7 +248,8 @@
     }
 
     .main_first_container_image {
-        display: none;
+        /* display: none; */
+        width: 75%;
     }
 
     .main_fourth_container_content_heading {
@@ -251,21 +259,43 @@
 
 @media screen and (max-width: 576px) {
     .main_first_container_content_title_area_heading {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     .main_first_container_content_title_area_description {
         font-size: 16px;
     }
 
+    /* .main_second_container {
+        margin: 500px 0;
+    } */
+
     .main_second_container_content_heading span {
-        font-size: 30px;
+        font-size: 28px;
+    }
+
+    .main_second_container_content_cards {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        row-gap: 38px;
+        margin-bottom: 20px;
+    }
+
+    .main_second_container_content_cards div {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .main_second_container_content_button button {
+        padding: 12px 18px;
+        font-size: 16px;
     }
 
     .main_third_container {
         justify-content: flex-start;
-        margin: 0px;
-        height: 77.5vh;
+        margin-top: 75px;
+        height: 50vh;
     }
 
     .main_fourth_container {
@@ -273,6 +303,6 @@
     }
 
     .main_fourth_container_content_heading {
-        font-size: 30px;
+        font-size: 28px;
     }
 }
